@@ -51,15 +51,15 @@ public class UserRegistration {
             System.out.println("Phone Number is Invalid");
     }
 
-    public void emailValidation() {
+    public void passwordValidation() {
         sc = new Scanner(System.in);
-        final String emailPattern = ".{8,}";
-        System.out.print("Enter Email ID to validate : ");
-        String email = sc.nextLine();
-        boolean resultForEmailValidation = Pattern.matches(emailPattern, email);
-        if (resultForEmailValidation)
-            System.out.println("Email is Valid");
-        if (!resultForEmailValidation)
-            System.out.println("Email is Invalid");
+        final String passwordPattern = ".{8,}";
+        System.out.print("Enter password to validate : ");
+        String password = sc.nextLine();
+        boolean resultForPasswordValidation = Pattern.matches(passwordPattern, password);
+        if (resultForPasswordValidation)
+            System.out.println("Password is Valid");
+        if (!resultForPasswordValidation)
+            System.out.println("Password is Invalid");
     }
 }
