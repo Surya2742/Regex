@@ -50,4 +50,16 @@ public class UserRegistration {
         if (!resultForPhoneNumberValidation)
             System.out.println("Phone Number is Invalid");
     }
+
+    public void emailValidation() {
+        sc = new Scanner(System.in);
+        final String emailPattern = ".{8,}";
+        System.out.print("Enter Email ID to validate : ");
+        String email = sc.nextLine();
+        boolean resultForEmailValidation = Pattern.matches(emailPattern, email);
+        if (resultForEmailValidation)
+            System.out.println("Email is Valid");
+        if (!resultForEmailValidation)
+            System.out.println("Email is Invalid");
+    }
 }
