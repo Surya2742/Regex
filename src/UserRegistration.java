@@ -3,6 +3,7 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     Scanner sc;
+
     public void nameValidation() {
         sc = new Scanner(System.in);
         final String FIRSTNAME = "([A-Z][a-z]{2,})";
@@ -18,7 +19,7 @@ public class UserRegistration {
         if (resultForLastName) {
             System.out.println("Last Name is valid and acceptable.");
         }
-        if (!resultForFirstName){
+        if (!resultForFirstName) {
             System.out.println("Invalid First Name");
         }
         if (!resultForLastName) {
@@ -26,7 +27,7 @@ public class UserRegistration {
         }
     }
 
-    public void eMailValidation () {
+    public void eMailValidation() {
         sc = new Scanner(System.in);
         final String emailPattern = "[a-zA-Z1-9]+([.]xyz|)+@bl+[.]co([.]in|)";
         System.out.print("Enter email address to validate : ");
@@ -36,5 +37,17 @@ public class UserRegistration {
             System.out.println("Email ID is acceptable.");
         if (!resultForEmailValidation)
             System.out.println("Email ID is not acceptable.");
+    }
+
+    public void phoneNumberValidation() {
+        sc = new Scanner(System.in);
+        final String phoneNumberPattern = "[0-9]{2}+(\\s)+[6-9][0-9]{9}";
+        System.out.print("Enter Phone Number to validate : ");
+        String phoneNumber = sc.nextLine();
+        boolean resultForPhoneNumberValidation = Pattern.matches(phoneNumberPattern, phoneNumber);
+        if (resultForPhoneNumberValidation)
+            System.out.println("Phone Number is Valid");
+        if (!resultForPhoneNumberValidation)
+            System.out.println("Phone Number is Invalid");
     }
 }
