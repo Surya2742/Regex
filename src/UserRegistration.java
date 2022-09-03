@@ -53,7 +53,7 @@ public class UserRegistration {
 
     public void passwordValidation() {
         sc = new Scanner(System.in);
-        final String passwordPattern = "(?=.*?[A-Z])(?=.*[0-9]).{8,}";
+        final String passwordPattern = "(?=.*?[A-Z])(?=.*[0-9])(?=.{8,})[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*";
         System.out.print("Enter password to validate : ");
         String password = sc.nextLine();
         boolean resultForPasswordValidation = Pattern.matches(passwordPattern, password);
