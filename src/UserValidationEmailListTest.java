@@ -45,7 +45,7 @@ public class UserValidationEmailListTest {
         });
     }
     @Test
-    public void listOfEmailIDTest() {
+    public void listOfEmailIDTest() throws UserRegistrationException {
         boolean result = ur.listOfEmailValidation(emailId);
         Assert.assertEquals(result, expectedResult);
     }
