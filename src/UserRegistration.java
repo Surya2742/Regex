@@ -32,7 +32,7 @@ public class UserRegistration {
     }
 
     public String phoneNumberValidation(String phoneNumber) throws UserRegistrationException {
-        final String phoneNumberPattern = "[0-9]{2}+(\\s)+[6-9][0-9]{9}";
+        final String phoneNumberPattern = "[0-9]{2}(\s)[6-9][0-9]{9}";
         if (Pattern.matches(phoneNumberPattern, phoneNumber))
             return "Happy";
         else {

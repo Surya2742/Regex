@@ -8,6 +8,7 @@ public class UserValidationJTest {
         String firstName = ur.firstNameValidation("surya");
         Assert.assertEquals("Happy", firstName);
     }
+
     @Test
     public void firstNameSuccessTest() throws UserRegistrationException {
         String firstName = ur.firstNameValidation("Surya");
